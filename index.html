@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <script src="scripts/calculator.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="scripts/calculator.js" defer></script>
+  <link rel="stylesheet" href="styles/calculator.css">
 </head>
+
 <body>
-    
+  <div class="calculator">
+    <div class="display">
+      <div id="screen"></div>
+    </div>
+    <div class="container">
+      <div class="numbers">
+        <button id="b7" class="btnNumber">7</button>
+        <button id="b8" class="btnNumber">8</button>
+        <button id="b9" class="btnNumber">9</button>
+        <button id="b4" class="btnNumber">4</button>
+        <button id="b5" class="btnNumber">5</button>
+        <button id="b6" class="btnNumber">6</button>
+        <button id="b1" class="btnNumber">1</button>
+        <button id="b2" class="btnNumber">2</button>
+        <button id="b3" class="btnNumber">3</button>
+        <button id="b0" class="btnNumber">0</button>
+      </div>
+      <div class="operators">
+        <button id="bPlus" class="button">+</button>
+        <button id="bMinus" class="button">-</button>
+        <button id="bMultiply" class="button">*</button>
+        <button id="bDivide" class="button">/</button>
+        <button id="bEquals">=</button>
+        <button id="bDecimal">.</button>
+        <button id="bClear">AC</button>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
