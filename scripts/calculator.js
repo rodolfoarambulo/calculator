@@ -11,6 +11,11 @@ btnEquals.addEventListener('click', () => {
         num2 = display.textContent;
         display.textContent = operate(+num1, operator, +num2);
     }
+});
+
+const btnClear = document.querySelector('.btnClear');
+btnClear.addEventListener('click', () => {
+    clear();
 })
 
 const btnNumbers = document.querySelectorAll('.btnNumber');
@@ -63,4 +68,11 @@ function multiply(a, b) {
 
 function divide(a, b) {
     return a / b;
+}
+
+function clear() {
+    num1 = '';
+    num2 = '';
+    operator = '';
+    display.textContent = '';
 }
