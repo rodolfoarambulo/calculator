@@ -4,10 +4,30 @@ let num1 = '',
 
 let display = document.querySelector('#screen');
 
+// special operators
+const btnEquals = document.querySelector('.btnEquals');
+btnEquals.addEventListener('click', () => {
+    if (num1 != '' && operator != '') {
+        num2 = display.textContent;
+        display.textContent = operate(+num1, operator, +num2);
+    }
+})
+
 const btnNumbers = document.querySelectorAll('.btnNumber');
 btnNumbers.forEach((btn) => {
     btn.addEventListener('click', () => {
         display.textContent += btn.textContent;
+    });
+});
+
+const btnOperators = document.querySelectorAll('.btnOperator');
+btnOperators.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        if (num1 === '' && display.textContent != '') {
+            num1 = display.textContent;
+            operator = btn.textContent;
+            display.textContent = '';
+        }
     });
 });
 
